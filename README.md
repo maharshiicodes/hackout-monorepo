@@ -1,15 +1,15 @@
-# reCarbon 🌎♻️
+# reCarbon ♻️
 
 **A B2B marketplace that turns captured CO₂ from a waste problem into a tradeable industrial resource.**
 
-🔗 **Live demo:** [hackout26-frontend.vercel.app](https://hackout26-frontend.vercel.app/)
-🏆 Built for **Hackout'26**
+ **Live demo:** [hackout26-frontend.vercel.app](https://hackout26-frontend.vercel.app/)
+ Built for **Hackout'26**
 
 > Reduce. Reuse. Recycle. **Recarbon.**
 
 ---
 
-## 💡 The Idea
+##  The Idea
 
 Capturing CO₂ is only half the problem — **the other half is finding someone who can use it.**
 
@@ -33,9 +33,9 @@ CAPTURE  →  LIST  →  MATCH  →  BID/BUY  →  MOVE  →  UTILIZE
 
 | Role | What they do |
 |---|---|
-| 🏭 Carbon suppliers / emitters | List captured CO₂ (or other chemicals) available for reuse |
-| 🧪 Carbon-utilization buyers | Post requirements and discover matching supply |
-| 🚚 Logistics providers | Register serviceable pincodes to enable movement of material |
+|  Carbon suppliers / emitters | List captured CO₂ (or other chemicals) available for reuse |
+|  Carbon-utilization buyers | Post requirements and discover matching supply |
+|  Logistics providers | Register serviceable pincodes to enable movement of material |
 
 **Why start with a general chemical marketplace?** The CAS-number + semantic-matching engine works for *any* chemical — CO₂ included. Building it generally first means the core discovery/matching infrastructure is proven and reusable as the CO₂-specific vertical (pricing, bidding, tracking, carbon-impact reporting) is layered on top.
 
@@ -43,7 +43,7 @@ CAPTURE  →  LIST  →  MATCH  →  BID/BUY  →  MOVE  →  UTILIZE
 
 ---
 
-## 🛠️ How it's built
+##  How it's built
 
 A monorepo with an independent frontend and backend.
 
@@ -61,12 +61,12 @@ reCarbon/              Node.js + Express + MongoDB API
 
 ### What's implemented today
 
-- 🔐 Manufacturing-company auth (register/login, JWT), and a separate logistics-company auth flow
-- 📦 Create/delete **selling** and **buying** material listings, keyed by CAS number (chemicals are auto-resolved/created — CAS is the single source of truth)
-- 🔎 **Natural-language search**: query → LLM extracts CAS number → query embedded → Pinecone semantic search filtered by CAS → ranked, matching listings with seller + logistics info
-- 📰 Personalized feed of relevant listings, with bookmarking
-- 🚚 Logistics companies can register/manage serviceable pincodes, surfaced alongside matching seller listings
-- 🖥️ Dashboards for manufacturing companies and logistics companies
+-  Manufacturing-company auth (register/login, JWT), and a separate logistics-company auth flow
+-  Create/delete **selling** and **buying** material listings, keyed by CAS number (chemicals are auto-resolved/created — CAS is the single source of truth)
+-  **Natural-language search**: query → LLM extracts CAS number → query embedded → Pinecone semantic search filtered by CAS → ranked, matching listings with seller + logistics info
+-  Personalized feed of relevant listings, with bookmarking
+-  Logistics companies can register/manage serviceable pincodes, surfaced alongside matching seller listings
+-  Dashboards for manufacturing companies and logistics companies
 
 ### Search pipeline
 
@@ -86,7 +86,7 @@ The LLM never invents results — it only parses intent. The actual match is alw
 
 ---
 
-## 🚀 Running it locally
+##  Running it locally
 
 **Backend** (`reCarbon/`)
 
@@ -110,6 +110,6 @@ Full API reference: [`reCarbon/API.md`](reCarbon/API.md) · [`hackout26-frontend
 
 ---
 
-## 📍 Roadmap
+##  Roadmap
 
 The current build proves the core discovery loop (list → search → match). The fuller product vision — bidding, order/shipment lifecycle, QR-based chain of custody, live tracking, reliability scoring, and carbon-impact analytics — is scoped out in [`reCarbon/FUNCTIONAL_REQUIREMENTS.md`](reCarbon/FUNCTIONAL_REQUIREMENTS.md).
